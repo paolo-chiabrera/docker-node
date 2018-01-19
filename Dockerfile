@@ -2,6 +2,8 @@ FROM node:8-alpine
 
 LABEL maintainer="Paolo Chiabrera <paolo.chiabrera@gmail.com>"
 
+ENV NODE_TLS_REJECT_UNAUTHORIZED 0
+
 RUN apk add --update curl && rm -rf /var/cache/apk/*
 
 RUN mkdir -p /opt/app
